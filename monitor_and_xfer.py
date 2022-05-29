@@ -4,7 +4,7 @@ import os
 import subprocess
 import sys
 
-from lib import utils
+import utils
 
 items_to_process = {}
 queue = Queue()
