@@ -8,7 +8,7 @@ import utils
 
 items_to_process = {}
 queue = Queue()
-rootPath = os.path.abspath('./dv')
+rootPath = os.path.abspath('..')
 destRootPath = '/Users/kelly/Movies/dvimports'
 destHost = 'kelly@macbookpro2016.local'
 
