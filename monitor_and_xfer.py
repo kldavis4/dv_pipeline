@@ -29,16 +29,21 @@ def worker_main(queue):
     dest_dir = os.path.dirname(dest_file_path)
 
     status = 'UNKOWN'
+    error = None
     try:
       result = subprocess.run(['ssh', dest_host, f'mkdir -p dest_dir'], check=True)
       result = subprocess.run(['scp', item, f'{dest_host}:{dest_file_path}'], check=True)
       status = 'DONE'
-    except:
+    except err:
       status = 'FAIL'
+      error = err
+
+    print('done processing', item, 'status', status)
 
     # create the done marker file
     with open(f'{item}.{status}', 'w') as fp:
-      pass
+      if status == 'FAIL':
+        fp.write(str(error))
 
     time.sleep(1) # simulate a "long" operation
 
