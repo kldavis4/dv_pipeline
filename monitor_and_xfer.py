@@ -30,7 +30,7 @@ def worker_main(queue):
 
     status = 'UNKOWN'
     try:
-      result = subprocess.run(['ssh', dest_host, f'mkdir -p dest_dir', check=True)
+      result = subprocess.run(['ssh', dest_host, f'mkdir -p dest_dir'], check=True)
       result = subprocess.run(['scp', item, f'{dest_host}:{dest_file_path}'], check=True)
       status = 'DONE'
     except:
