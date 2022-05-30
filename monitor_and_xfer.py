@@ -34,7 +34,7 @@ def worker_main(queue):
       result = subprocess.run(['ssh', dest_host, f'mkdir -p dest_dir'], check=True)
       result = subprocess.run(['scp', item, f'{dest_host}:{dest_file_path}'], check=True)
       status = 'DONE'
-    except err:
+    except Exception as err:
       status = 'FAIL'
       error = err
 
