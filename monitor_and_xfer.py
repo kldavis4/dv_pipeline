@@ -8,7 +8,7 @@ import utils
 
 items_to_process = {}
 queue = Queue()
-rootPath = os.path.abspath('/Users/kldavis/Movies/iMovie Events.localized/imports')
+rootPath = os.path.abspath('/Users/kldavis/Movies/iMovie Events.localized')
 destRootPath = '/Users/kelly/Movies/dvimports'
 destHost = 'kelly@macbookpro2016.local'
 
