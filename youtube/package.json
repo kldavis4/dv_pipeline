@@ -1,0 +1,21 @@
+{
+  "name": "davis-family-fencing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "fetch-refresh-token": "ts-node-esm lib/refresh_token",
+    "sync-youtube": "ts-node-esm lib/youtube.ts",
+    "test_1": "ts-node-esm lib/yaml_test.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "googleapis": "^100.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "koa": "^2.13.4",
+    "puppeteer-core": "^14.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "eslint": "8.14.0"
+  }
+}
